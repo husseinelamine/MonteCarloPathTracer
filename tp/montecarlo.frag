@@ -41,7 +41,7 @@ vec3 random_path(in vec3 D, in vec3 O)
 		traverse_all_bvh(O,D);
 		
 		if(!hit()){
-			return total + attenu * mix (vec3(0.1,0.1,0.5),vec3(0.4,0.4,0.9),max(0.0,(0.5+D.z)/1.5));
+			return total + attenu * mix (vec3(0.1,0.1,0.2),vec3(0.7,0.4,0.7),max(0.0,(0.5+D.z)/1.5));
 		}
 
 

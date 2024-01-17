@@ -53,7 +53,7 @@ vec3 random_path(in vec3 D, in vec3 O)
 		traverse_all_bvh(O,D);
 		
 		if(!hit()){
-			return total + attbri * mix (vec3(0.1,0.1,0.5),vec3(0.4,0.4,0.9),max(0.0,(0.5+D.z)/1.5));
+			return total + attbri * mix (vec3(0.1,0.1,0.2),vec3(0.7,0.4,0.7),max(0.0,(0.5+D.z)/1.5));
 		}
 
 
@@ -87,7 +87,7 @@ vec3 random_path(in vec3 D, in vec3 O)
 			D = normalize(refract(D,-N,initial_ratio));
 		}
 		else {
-			attenu *=  0.2 + 0.9 *max(0.0,dot(D,N));
+			attenu *=  0.3 + 0.9 *max(0.0,dot(D,N));
 			attbri *= mat.r;
 			O = P+BIAS*N;
 			vec3 refray = reflect(D, N);
@@ -96,7 +96,7 @@ vec3 random_path(in vec3 D, in vec3 O)
 	}
 
 	return total * 0.1;
-		
+	//return vec3(0.0);	
 
 }
 
