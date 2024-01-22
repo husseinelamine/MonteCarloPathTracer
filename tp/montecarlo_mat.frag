@@ -29,7 +29,7 @@ vec3 random_ray(in vec3 D, float r)
 	mat3 M = mat3(U, V, D); // Matrice de changement de repère 3x3
 
     return normalize(M * sample_hemisphere(r));
-}
+} 
 
 
 vec3 random_path(in vec3 D, in vec3 O)
