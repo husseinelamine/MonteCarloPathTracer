@@ -1,30 +1,63 @@
-# EasyCppOGL
+# Monte Carlo Path Tracer (C++)
 
-## Compilation
+## Overview
 
-### Dependencies
+This repository contains a **C++ Monte Carlo path tracer** developed as part of a **university project**.
 
-* eigen3
-* glfw3
-* assimp
+The objective of this project was to explore **core rendering and algorithmic concepts** while working close to the hardware, with a strong focus on **performance, numerical stability, and software rigor**.
 
-#### Linux
+This project is academic in nature and was not intended as a production-ready renderer.
 
-#### Windows
+---
 
-	Use vckpg
-	Use triplet x64-windows (var env: VCPKG_DEFAULT_TRIPLET=x64-windows)
+## Technical Focus
 
-	Use cmake-gui version:
-	Generator Visual Studio 15 2017
-	Optional platform: x64
-	Specificy toolchain file : C:\VCPKG\scripts\buildsystems\vcpkg.cmake
-	or by command line
-		cmake.exe ..\easycppogl\ -DCMAKE_GENERATOR_PLATFORM=x64 -DCMAKE_TOOLCHAIN_FILE="C:\VCPKG\scripts\buildsystems\vcpkg.cmake"
+- C++ (modern C++)
+- Monte Carlo integration
+- Hemispherical sampling
+- Bounding Volume Hierarchy (BVH)
+- GPU experimentation (OpenGL / GLSL)
+- Performance considerations and memory management
 
-	For QtCreator
-	* add dir of jom.exe in path var (it is in QtCreator/bin)
-	* launch VS Tool x64 command shell 
-	* create build dir and go into.
-	* cmake.exe ..\easycppogl\ -DCMAKE_TOOLCHAIN_FILE="C:/VCPKG/scripts/buildsystems/vcpkg.cmake" -G "NMake Makefiles JOM"
-	* in QtCreator import the build dir
+---
+
+## Project Structure
+
+```
+
+DrawSampling/      Sampling experiments
+MontecarloGPU/    GPU-based path tracing logic
+bvh_gpu/          BVH construction and traversal
+GL/               OpenGL helpers
+shaders/           GLSL shaders
+cmake/             CMake modules
+
+```
+
+---
+
+## Build System
+
+- CMake-based project
+- Dependencies:
+  - Eigen
+  - GLFW
+  - Assimp
+
+Built and tested on Linux and Windows (via vcpkg).
+
+---
+
+## What this project demonstrates
+
+Although academic, this project demonstrates:
+- A solid understanding of C++ and low-level programming concepts
+- The ability to implement and reason about complex algorithms
+- Attention to performance constraints and numerical robustness
+- Comfort working with large C++ codebases and build systems
+
+---
+
+## Context
+
+This project was developed during my university studies as part of a computer graphics / rendering curriculum.
